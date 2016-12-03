@@ -14,7 +14,7 @@ csvinput = open(input_file, 'rb')
 csvoutput = open(output_file, 'wb')
 reader = csv.DictReader(csvinput)
 writer = csv.writer(csvoutput, delimiter=',',quotechar='"',quoting=csv.QUOTE_ALL)
-writer.writerow(['Quantity','Value', 'Parts', 'Description'])
+writer.writerow(['Quantity','Value', 'Parts', 'Description', 'Package'])
 for row in reader:
-    writer.writerow([row['Qty'], row['Value'], row['Parts'], row['Description']])
+    writer.writerow([row['Qty'], row['Value'], row['Parts'], row['Description'], row['Package']])
 
